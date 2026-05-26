@@ -2,5 +2,3 @@ mobile
 laptop
 pen
 book
-cake 
-shirt 
