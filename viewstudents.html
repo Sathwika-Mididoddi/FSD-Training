@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
     <nav>
@@ -13,10 +14,35 @@
         <a href="logoutpage.html">Logout</a>
     </nav>
     <h1>Student List</h1>
-    <ul>
-        <li>John 23B81A0500 CSE 8.9 <a href="editstudent.html">Edit</a> <a href="deletestudent.html">Delete</a></li>
-        <li>Jane 23B81A0501 ECE 8.5 <a href="editstudent.html">Edit</a> <a href="deletestudent.html">Delete</a></li>
-        <li>Doe 23B81A0502 ME 8.2   <a href="editstudent.html">Edit</a> <a href="deletestudent.html">Delete</a></li>
-    </ul>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Roll Number</th>
+            <th>Branch</th>
+            <th>CGPA</th>
+            <th>Actions</th>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>23B81A0500</td>
+            <td>CSE</td>
+            <td>8.9</td>
+            <td><a href="editstudent.html">Edit</a> <a href="deletestudent.html">Delete</a></td>
+        </tr>
+        <tr>   
+            <td>Jane</td>
+            <td>23B81A0501</td>
+            <td>ECE</td>
+            <td>8.5</td>
+            <td><a href="editstudent.html">Edit</a> <a href="deletestudent.html">Delete</a></td>    
+        </tr>
+        <tr>    
+            <td>Doe</td>
+            <td>23B81A0502</td>
+            <td>ME</td>
+            <td>8.2</td>
+            <td><a href="editstudent.html">Edit</a> <a href="deletestudent.html">Delete</a></td>
+        </tr>
+    </table>
 </body>
 </html>
