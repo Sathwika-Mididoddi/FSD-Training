@@ -1,0 +1,525 @@
+/*responsive navigation bar*/
+@media all and (max-width:768px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar a {
+        display: block;
+        padding: 3px;
+        background-color: rgb(54, 54, 54);
+        margin: 2px;
+        color: white;
+    }
+}
+
+@media all and (min-width:769px) {
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        background-color: rgb(20, 20, 20);
+        height: 40;
+        padding: 8px;
+    }
+
+    .navbar a {
+        padding: 13px;
+        margin: 2px;
+        font-size: 20px;
+        color: white;
+    }
+}
+
+/*Responsive Student Profile Task*/
+.studentcard {
+    padding: 10px;
+    background-color: rgb(161, 160, 160);
+    border-radius: 10px;
+    display: flex
+}
+
+.studentcard img {
+    width: 200px;
+    height: 200px;
+    margin: 8px;
+}
+
+.studentdetails {
+    background-color: rgb(204, 202, 202);
+    border-radius: 10px;
+    margin: 8px;
+}
+
+@media all and (max-width:450px) {
+    .studentcard {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .studentdetails {
+        width: 100%;
+        padding-left: 10px;
+    }
+}
+
+@media all and (min-width:451px) {
+    .studentcard {
+        flex-direction: row;
+        max-width: max-content;
+    }
+
+    .studentdetails {
+        padding: 0px 20px 0px 20px;
+    }
+}
+
+/*Responsive Gallery*/
+.gallery {
+    display: grid;
+}
+
+.gallery img {
+    width: 100%;
+    height: 100%;
+}
+
+@media all and (max-width:450px) {
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+}
+
+@media all and (min-width:451px) and (max-width:850px) {
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+}
+
+@media all and (min-width:851px) {
+    .gallery {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+/*Student Management System*/
+.content {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(215, 223, 250);
+    padding: 5px;
+    width: 100%;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 5px;
+    justify-content: space-evenly;
+    background-color: rgb(250, 215, 250);
+}
+
+.maincontent {
+    background-color: rgb(250, 215, 250);
+    padding: 10px;
+    border-radius: 15px;
+    margin: 5px;
+}
+
+.header {
+    background-color: rgb(228, 245, 216);
+    padding: 5px;
+    width: 100%;
+}
+
+.smd {
+    width: max-content;
+}
+
+@media all and (max-width:450px) {
+    .sidebar {
+        display: none;
+    }
+}
+
+/* Animated Button*/
+.animatedbutton {
+    background-color: rgb(0, 153, 255);
+    color: white;
+    width: 125px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    margin: 15px;
+}
+
+.animatedbutton:hover {
+    background-color: green;
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+
+/* Expanding Card*/
+.card {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(248, 210, 153);
+    border-radius: 10px;
+    text-align: center;
+    margin: 15px;
+}
+
+.card:hover {
+    width: 250px;
+    height: 250px;
+    transition: all ease 0.3s;
+}
+
+/*Navigation Hover Effect*/
+.navbar1 {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(54, 54, 54);
+    padding: 15px;
+    justify-content: space-evenly;
+}
+
+.navbar1 a {
+    display: block;
+    padding: 3px;
+    font-size: 20px;
+    margin: 2px;
+    color: white;
+}
+
+.navbar1 a:hover {
+    color: rgb(226, 252, 179);
+    font-size: 30px;
+    text-decoration: underline;
+    transition: all ease 0.5s;
+}
+
+/* Image Zoom Effect*/
+.image {
+    width: 200px;
+    height: 150px;
+    padding: 20px;
+}
+
+.image:hover {
+    transform: scale(1.2);
+    transition: all ease 0.5s;
+}
+
+/* loading spinner*/
+.spinner {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border-width: 7px;
+    border-style: solid;
+    border-color: rgb(92, 92, 92);
+    margin-left: 15px;
+    border-top-color: rgb(155, 153, 153);
+    animation: spin 1s linear 0s infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(90deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    75% {
+        transform: rotate(270deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*Moving Ball*/
+.ball {
+    background-color: rgb(203, 148, 255);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: movingball 1s ease 0s infinite alternate;
+}
+
+@keyframes movingball {
+    from {
+        transform: translate(0px, 0px);
+    }
+
+    to {
+        transform: translate(300px, 0px);
+    }
+}
+
+/*Bouncing Text*/
+.text {
+    animation: bounce 1s linear 0s infinite;
+
+}
+
+.textbox {
+    height: 200px;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    25% {
+        transform: translate(0px, 50px);
+    }
+
+    50% {
+        transform: translate(0px, 100px);
+    }
+
+    75% {
+        transform: translate(0px, 50px);
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+/*Traffic Signal Animation*/
+.light {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    animation: trafficlights 6s;
+    animation-iteration-count: infinite;
+}
+
+.tbox {
+    background-color: black;
+    padding: 10px;
+    width: 50px;
+    height: 60px;
+}
+
+@keyframes trafficlights {
+
+    0%,
+    33% {
+        background-color: red;
+    }
+
+    34%,
+    66% {
+        background-color: yellow;
+    }
+
+    67%,
+    100% {
+        background-color: green;
+    }
+}
+
+/* responsive Animated Login Form */
+.form {
+    padding: 20px;
+    background-color: rgb(219, 219, 219);
+    border-radius: 10%;
+    width: fit-content;
+    animation: animate 3s linear 2s;
+    margin: 10px;
+}
+
+.form input {
+    display: block;
+    margin: 5px;
+    width: 200px;
+    padding: 5px;
+    border-radius: 7px;
+    border-width: 1px;
+}
+
+.form label {
+    display: block;
+    margin: 5px;
+}
+
+.btn {
+    margin: 5px;
+    width: 210px;
+    padding: 10px;
+    border: none;
+    background-color: rgb(180, 180, 180);
+    border-radius: 7px;
+}
+
+.btn:hover {
+    border: width 1px;
+    border-style: solid;
+    border-width: 1px;
+    transition: all ease 0.5s;
+}
+
+@keyframes animate {
+    from {
+        opacity: 0;
+        transform: translate(-50px, 0px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+}
+
+/*responsive product card*/
+.product {
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    background-color: rgb(77, 77, 77);
+    color: white;
+    width: fit-content;
+    padding: 20px;
+    text-align: center;
+}
+
+@media screen and (max-width:450px) {
+    .product {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.productdetails {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.product img {
+    box-sizing: content-box;
+    border-radius: 5px;
+}
+
+.product img:hover {
+    transform: scale(1.1);
+    transition: all ease 0.5s;
+}
+
+.product button {
+    background-color: rgb(170, 170, 170);
+    border-radius: 8px;
+    color: black;
+    width: 100%;
+    padding: 10px;
+}
+
+.product button:hover {
+    background-color: rgb(43, 172, 43);
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    transition: all ease 0.5s;
+}
+
+/*Student Management System Homepage */
+.smsh {
+    padding: 20px;
+    background-color: rgb(219, 219, 219);
+    width: fit-content;
+    animation: animate1 3s ease-in 2s;
+    margin: 10px;
+}
+
+@keyframes animate1 {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.smsh {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.smsh header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: rgb(104, 102, 102);
+    width: 100%;
+}
+
+.hero,
+.features {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.smsh button {
+    margin: 5px;
+    width: 210px;
+    padding: 10px;
+    border: none;
+    background-color: rgb(180, 180, 180);
+    border-radius: 7px;
+}
+
+.smsh button:hover {
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    transition: all ease 0.4s;
+}
+
+.smsh h3 {
+    text-align: center;
+}
+
+.section1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.features h2 {
+    text-align: center;
+}
+
+@media all and (max-width:450px) {
+    .section1 {
+        display: flex;
+        flex-direction: column;
+    }
+}
