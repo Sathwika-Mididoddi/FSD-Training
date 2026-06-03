@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body class="ps-3">
+    <h3>Fundamentals of Responsive Grid Layout</h3>
+    <div class="container">
+        <div class="row">
+            <p class="col-12 col-sm-6 col-lg-4">Column 1</p>
+            <p class="col-12 col-sm-6 col-lg-4">Column 2</p>
+            <p class="col-12 col-sm-6 col-lg-4">Column 3</p>
+        </div>
+    </div>
+    <h3>Column Layouts and Grid Classes</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-3 col-sm-3" style="background-color:antiquewhite">Sidebar</div>
+            <div class="col-9 col-sm-3" style="background-color: bisque;">Content Area</div>
+        </div>  
+    </div>
+    <div>
+        <div class="row mt-2">
+            <div class="col-sm-3 bg-primary">Column 1</div>
+            <div class="col-sm-3 bg-secondary">Column 2</div>
+            <div class="col-sm-3 bg-success">Column 3</div>
+            <div class="col-sm-3 bg-warning">Column 4</div>
+        </div>
+    </div>
+    <h3>Typography</h3>
+    <div>
+        <h1 class="display-1 text-muted">Heading 1</h1>
+        <h2 class="display-2">Heading 2</h2>
+        <h3 class="display-3 fw-bold">Heading 3</h3>
+        <p class="lead">Lead paragraph</p>
+    </div>
+    <div>
+        <p class="text-uppercase">Paragraph</p>
+        <p class="text-lowercase">Paragraph</p>
+        <p class="text-capitalize">paragraph</p>
+    </div>
+    <h3>Buttons </h3>
+    <div class="container-fluid">
+        <div class="row">
+            <button type="button" class="btn btn-primary col-4 col-md-3 col-lg-2 m-1">Primary</button>
+            <button type="button" class="btn btn-secondary col-4 col-md-3 col-lg-2 m-1">Secondary</button>
+            <button type="button" class="btn btn-success col-4 col-md-3 col-lg-2 m-1">Success</button>
+            <button type="button" class="btn btn-danger col-4 col-md-3 col-lg-2 m-1">Danger</button>
+            <button type="button" class="btn btn-warning col-4 col-md-3 col-lg-2 m-1">Warning</button>
+            <button type="button" class="btn btn-outline-info col-4 col-md-3 col-lg-2 m-1">Info</button>
+            <button type="button" class="btn btn-light col-4 col-md-3 col-lg-2 m-1">Light</button>
+            <button type="button" class="btn btn-outline-dark col-4 col-md-3 col-lg-2 m-1">Dark</button>
+        </div>
+        <div class="btn-group m-1">
+            <button class="btn btn-primary">Button</button>
+            <button class="btn btn-secondary">Button</button>
+            <button class="btn btn-success">Button</button>
+        </div>
+    </div>
+    <h3>Card</h3>
+    <div class="card col-sm-4 col-md-2">
+        <div class="card-header">
+            <h5 class="card-title">Student Card</h5>
+        </div>
+        <div class="card-body">
+            <img src="ea7b3a6b633ee9a25eb147c1f472ef0f.jpg" class="card-img-top">
+            <p class="card-text">Name:Ram<br/>Branch: CSE<br/></p>
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-primary">View Profile</button>
+        </div>
+    </div>
+    <h3>Spacing Utilities</h3>
+    <button class="m-3 py-3 col-3 btn btn-outline-primary">Margin 3</button>
+    <button class="p-1 col-2 btn btn-outline-success">Padding 1</button>
+    <button class="mt-1 ms-1 col-2 pe-2 btn btn-outline-danger">button</button>
+    <div class="container col-md-9 m-2">
+        <div class="row bg-dark text-center p-3 justify-content-center m-2">
+            <h3 class="text-warning">Pricing Section</h3>
+            <p class="text-light">Total price: 10,000</p>
+            <button class="btn btn-success col-2">Buy Now</button>
+        </div>
+    </div>
+    <h3>Colors and Backgrounds </h3>
+    <div class="container">
+        <div class="row bg-secondary">
+            <h3 class="text-danger">Dashboard</h3>
+        </div>
+        <div class="row bg-dark">
+            <p class="text-primary fw-bold fst-italic">Total Users: 1000</p>
+            <p class="text-success fw-bold fst-italic">Total Sales: 5000</p>
+            <p class="text-warning fw-bold fst-italic">Total Orders: 200</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row bg-gradient bg-dark text-white mt-2 p-3">
+            <h3>This container has gradient background</h3>
+        </div>
+    </div> 
+    <h3>Borders, Shadows, and Rounded Corners</h3>
+    <div class="border p-3 col-1 m-1" width="100px" height="100px"></div>
+    <div class="border border-primary col-1 p-3 m-1" width="100px" height="100px"></div>
+    <div class="border border-3 col-1 p-3 m-1" width="100px" height="100px"></div>
+    <img src="ea7b3a6b633ee9a25eb147c1f472ef0f.jpg" class="rounded-circle col-2 m-1">
+    <div class="card shadow shadow-lg rounded-pill col-4 px-auto">
+        <div class="card-body">
+            <p>Card with shadow property</p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
