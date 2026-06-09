@@ -14,7 +14,7 @@
         <a href="logoutpage.html">Logout</a>
     </nav>
     <h1>Add Student</h1>
-    <form action="viewstudents.html">
+    <form>
         <label for="name">Name:</label>
         <input type="text" required id="name"/>
         <label for="rollno">Roll Number:</label>
@@ -23,7 +23,27 @@
         <input type="text" pattern="[A-Za-z]{3,4}" required id="branch"/>
         <label for="cgpa" >CGPA:</label>
         <input type="number" step="0.01" min="0" max="10" required id="cgpa"/>
-        <button type="submit">Add Student</button>
+        <button type="submit" onclick="addStudent(event)">Add Student</button>
     </form>
+    <script>
+        function addStudent(event)
+        {
+            event.preventDefault()
+            let name=document.getElementById("name");
+            let rollno=document.getElementById("rollno");
+            let branch=document.getElementById("branch");
+            let cgpa=document.getElementById("cgpa");
+            let students=JSON.parse(localStorage.getItem("students"))|| [];
+            let newStudent={
+                name:name.value,
+                rollno:rollno.value,
+                branch:branch.value,
+                cgpa:cgpa.value
+            };
+            students.push(newStudent);
+            localStorage.setItem("students",JSON.stringify(students));
+            window.location.href="viewstudents.html";
+        }
+    </script>
 </body>
 </html>
