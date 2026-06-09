@@ -29,7 +29,14 @@
     <script>
         let students = JSON.parse(localStorage.getItem("students"));
         let rn = localStorage.getItem("editRollNo");
-        let student = students.find(s => s.rollno === rn);
+        //let student = students.find(s => s.rollno === rn);
+        let student = undefined;
+        for (let s of students) {
+            if (s.rollno === rn) {
+                student = s;
+                break;
+            }
+        }
         let name = document.getElementById("name");
         let rollno = document.getElementById("rollno");
         let branch = document.getElementById("branch");
@@ -44,12 +51,12 @@
             let rollno = document.getElementById("rollno").value;
             let branch = document.getElementById("branch").value;
             let cgpa = document.getElementById("cgpa").value;
-            student.name=name;
-            student.rollno=rollno;
-            student.branch=branch;
-            student.cgpa=cgpa;
-            localStorage.setItem("students",JSON.stringify(students));
-            window.location.href="viewstudents.html";
+            student.name = name;
+            student.rollno = rollno;
+            student.branch = branch;
+            student.cgpa = cgpa;
+            localStorage.setItem("students", JSON.stringify(students));
+            window.location.href = "viewstudents.html";
         }
     </script>
 </body>

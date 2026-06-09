@@ -13,7 +13,17 @@ for (let student of students) {
 }
 function deleteStudent(rollno) {
     let students = JSON.parse(localStorage.getItem("students"));
-    students = students.filter(s => s.rollno !== rollno);
+    //students = students.filter(s => s.rollno !== rollno);
+    let idx=-1;
+    for(i in students)
+    {
+        if(students[i].rollno===rollno)
+        {
+            idx=i;
+            break;
+        }
+    }
+    students.splice(idx,1);
     localStorage.setItem("students", JSON.stringify(students));
     location.reload();
 }
