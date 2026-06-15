@@ -21,20 +21,20 @@
         <button type="Submit">Login</button>
     </form>
     <script>
-        function loginUser(event)
+        async function loginUser(event)
         {
+            event.preventDefault();
             let username=document.getElementById("username").value;
             let pwd=document.getElementById("password").value;
-            event.preventDefault();
-            let storedUser=localStorage.getItem("user")
-            storedUser=JSON.parse(storedUser);
-            if (storedUser && storedUser.username===username && storedUser.password===pwd)
+            //let storedUser=localStorage.getItem("user")
+            let response=await fetch("http://localhost:3000/users")
+            students=await response.json();
+            students.some(s=>s && s.username===username && s.password===pwd)
             {
                 window.location.href="dashboard.html"
+                return;
             }
-            else{
-                alert("Invalid Credentials");
-            }
+            alert("Invalid Credentials");
         }
     </script>
 </body>

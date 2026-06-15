@@ -28,7 +28,7 @@
     </form>
     <p>Already have an account?<a href="login.html">Login here</a></p>
     <script>
-        function formsubmit(event) {
+        async function formsubmit(event) {
             event.preventDefault();
             let username = document.getElementById("username").value;
             let email = document.getElementById("email").value;
@@ -51,10 +51,16 @@
                 password: pwd
             };
             user = JSON.stringify(user);
-            console.log(user);
-            localStorage.setItem("user", user);
+            //localStorage.setItem("user", user);
+            const result=await fetch("http://localhost:3000/users",{
+                method:"POST",
+                headers:{
+                    "Content-Type":"application/json"
+                },
+                body:user
+            })
             alert("Registration successful");
-            window.location.href = "login.html"
+            window.location.href = "login.html";
         }
     </script>
 </body>
