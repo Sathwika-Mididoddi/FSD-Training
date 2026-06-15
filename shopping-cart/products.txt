@@ -1,0 +1,6 @@
+mobile
+laptop
+pen
+book
+shirt 
+belt 
