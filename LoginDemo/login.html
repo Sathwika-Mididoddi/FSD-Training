@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            color: red;
+            transition:  all 0.1s ease;
+        }
+        h1:hover{
+            color:brown;
+            font-weight: lighter;
+        }
+        input{
+            color:black;
+            background-color: whitesmoke;
+            border-radius: 2px;
+            border-color: red;
+            border-style: dashed;
+            border-width: 3px;
+            transition: all 0.3s ease;
+        }
+        input:hover{
+            background-color: #f0f0f0;
+            border-color: brown;
+            border-width: 4px;
+            border-style: solid;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Login Page</h1>
+    <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="Login">
+    </form>
+    <script>
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            if(password.length > 8){
+                alert('Login successful'); 
+            } else {
+                alert('Login invalid');
+            }
+            console.log('Username:', username);
+            console.log('Password:', password);
+        });
+    </script>
+</body>
+</html>
