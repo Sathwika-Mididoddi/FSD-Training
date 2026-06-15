@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="addstudent.html">Add Student</a>
+        <a href="viewstudents.html">View Students</a>
+        <a href="logoutpage.html">Logout</a>
+    </nav>
+    <h1>Add Student</h1>
+    <form onsubmit="addStudent(event)">
+        <label for="name">Name:</label>
+        <input type="text" required id="name" />
+        <label for="rollno">Roll Number:</label>
+        <input type="text" pattern="[a-zA-Z0-9]{10}" required id="rollno" />
+        <label for="branch">Branch:</label>
+        <input type="text" pattern="[A-Za-z]{3,4}" required id="branch" />
+        <label for="cgpa">CGPA:</label>
+        <input type="number" step="0.01" min="0" max="10" required id="cgpa" />
+        <button type="submit" >Add Student</button>
+    </form>
+    <script>
+        async function addStudent(event) {
+            event.preventDefault()
+            let name = document.getElementById("name");
+            let rollno = document.getElementById("rollno");
+            let branch = document.getElementById("branch");
+            let cgpa = document.getElementById("cgpa");
+            // let students = JSON.parse(localStorage.getItem("students")) || [];
+            let newStudent = {
+                name: name.value,
+                rollno: rollno.value,
+                branch: branch.value,
+                cgpa: cgpa.value
+            };
+            // students.push(newStudent);
+            // localStorage.setItem("students", JSON.stringify(students));
+            const result=await fetch("http://localhost:3000/students",{
+                method:"POST",
+                headers:{
+                    "Content-Type":"application/json"
+                },
+                body:JSON.stringify(newStudent)
+            })
+            window.location.href = "viewstudents.html";
+
+        }
+        /*
+
+        */
+    </script>
+</body>
+
+</html>

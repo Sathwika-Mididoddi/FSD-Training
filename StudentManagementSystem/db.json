@@ -1,0 +1,20 @@
+{
+  "users": [
+    {
+      "username": "John",
+      "email": "john@gmail.com",
+      "password": "John@123",
+      "id": "wU1kUbRNkiQ"
+    }
+  ],
+  "students": [
+    {
+      "name": "Harini",
+      "rollno": "2784451427",
+      "branch": "CSE",
+      "cgpa": "8.5",
+      "id": "ccDbFtUpgps"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
